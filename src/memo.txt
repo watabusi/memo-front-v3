@@ -1,0 +1,20 @@
+cd angularProjects/memoManager-front
+
+ng serve --open
+
+angular流れ
+・「ng new プロジェクト名」で現在のディレクトリに作成
+・プロジェクト内ディレクトリで「ng serve --open」コマンド実行して起動
+
+・moduleファイルで「FormsModule」のインポートとimport配列への追加をしておく
+　・これはテンプレートとクラスファイルの双方向バインディングに必要なクラス
+　・つまりhtmlの適当なタグとクラスファイルの適当な変数を結びつけるやつ
+
+
+・「デコレーターの実験的なサポートは将来のリリースで変更になる可能性がある機能です。'tsconfig' または 'jsconfig' に 'experimentalDecorators' オプションを設定してこの警告を削除します。」
+の警告は「ファイル」「ユーザー設定」「設定」から「tsconfig」で検索かけて「JS/TS › Implicit Project Config: Experimental Decorators」にチェック入れれば消える
+
+・「ng generate module app-routing --flat --module=app」でルートModuleを用意する
+　・urlでのページの管理に必要
+　・「--flatは、固有のフォルダの代わりに、src/appに生成したファイルを置きます。--module=appは、AppModuleのimports配列に、生成したモジュールを登録するようCLIに指示します。」
+　　Angular公式チュートリアルからの引用
